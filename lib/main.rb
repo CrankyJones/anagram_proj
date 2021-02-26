@@ -1,8 +1,8 @@
 class Word_Check
 
     def anagram (word_one, word_two)
-      first_word = word_one.split('').sort
-      second_word = word_two.split('').sort
+      first_word = word_one.downcase().split('').sort
+      second_word = word_two.downcase().split('').sort
       if (first_word == second_word)
         'These are anagrams.'
       else
