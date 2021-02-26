@@ -6,15 +6,15 @@ class Word_Check
       second_word = word_two.downcase().split('').sort
       if (first_word == second_word)
         'These are anagrams.'
-      # elsif (antigram(word_one, word_two))
-      #   'These are antigrams.'
+      elsif (antigram(word_one, word_two) == true)
+        'These are antigrams'
       else
         'These are not anagrams.'
       end
     end
 
     def real_words(word_one, word_two)
-      if (!word_one.match?(/[aeiouy]/i) || !word_two.match?(/[aeiouy]/i))
+      if ((!word_one.match?(/[aeiouy]/i) || !word_two.match?(/[aeiouy]/i)) || (word_one.match?(/[0-9]/i) || word_two.match?(/[0-9]/i)))
         'Please input real words.'
       end
     end
@@ -29,7 +29,7 @@ class Word_Check
           end        
         end
       end
-      return 'These are antigrams.'
+      return true
     end
 
 end

@@ -26,11 +26,15 @@ describe(Word_Check) do
       words = Word_Check.new()
       expect(words.real_words('tbBmn', 'tbBmn')).to(eq('Please input real words.'))
       end
+      it ('will take 2 arguments see if they are anagrams and check to make sure they are not consonant chains or have numbers') do
+      words = Word_Check.new()
+      expect(words.real_words('toad9', 'toad')).to(eq('Please input real words.'))
+      end
     end
     describe('#antigram') do
       it ('will take 2 arguments see if they are antigrams') do
       words = Word_Check.new()
-      expect(words.antigram('wolf', 'rabbit')).to(eq('These are antigrams.'))
+      expect(words.antigram('wolf', 'rabbit')).to(eq(true))
       end
     end
   end
