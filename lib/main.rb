@@ -20,18 +20,16 @@ class Word_Check
     end
 
     def antigram (word_one, word_two)
-      counter = 0
       first_word = word_one.downcase().split('').sort
       second_word = word_two.downcase().split('').sort
       first_word.each do |lettera|
         second_word.each do |letterb|
           if (lettera == letterb)
-            'huh?'
-          else
-            'These are antigrams.'
-          end
+            return false
+          end        
         end
       end
+      return 'These are antigrams.'
     end
 
 end
