@@ -2,8 +2,8 @@ class Word_Check
 
     def anagram (word_one, word_two)
       real_words(word_one, word_two)
-      first_word = word_one.downcase().split('').sort
-      second_word = word_two.downcase().split('').sort
+      first_word = word_one.gsub(/[\W_]/, '').downcase().split('').sort
+      second_word = word_two.gsub(/[\W_]/, '').downcase().split('').sort
       if (first_word == second_word)
         'These are anagrams.'
       elsif (antigram(word_one, word_two) == true)

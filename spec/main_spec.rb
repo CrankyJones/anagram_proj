@@ -19,6 +19,10 @@ describe(Word_Check) do
     words = Word_Check.new()
     expect(words.anagram('TimE', 'MItE')).to(eq('These are anagrams.'))
     end
+    it ('will take 2 arguments see if they are anagrams for both words and phrases') do
+    words = Word_Check.new()
+    expect(words.anagram('TimE to go up!!!', 'MItE go pout...')).to(eq('These are anagrams.'))
+    end
 
 
     describe('#real_words') do
