@@ -1,30 +1,30 @@
-# (Application Name)
+# Anagram Checker
 
-#### (Brief Description of Application)
+#### This checker will evaluate words and phrases to determine if they are anagrams, antigrams, or just 2 plain ol' words.
 
-#### By (Your Name Here)
+#### By Geof Rosenmund
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* Ruby
+* RSPEC 
 
 ## Description
 
+This checker will take two inputs, both words and phrases.  It check to make sure there is at least one vowel and no numbers in the words. If that test passes, it will strip punctuation and whitespace from the inputted string.  Next, it converts the string into an array of single letters. The checker then sorts these arrays alphabetically and then checks to see if the arrays are the same. 
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Clone repository from Github
+* Navigate to the top level of the project directory
+* To create the Gemfile.lock: $ bundle install
+* To make the script executable: $ chmod +x script.rb
+* To run the script: $ ./script.rb
+* Follow the prompts in the terminal
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No known bugs at this time.
 
 ## **License**
 [MIT](https://opensource.org/licenses/MIT)
