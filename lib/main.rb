@@ -6,7 +6,7 @@ class Word_Check
       if (first_word == second_word)
         'These are anagrams.'
       else
-        'These are not anagrams'
+        'These are not anagrams.'
       end
 
     end
