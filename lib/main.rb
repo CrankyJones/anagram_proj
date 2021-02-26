@@ -11,7 +11,8 @@ class Word_Check
       elsif (antigram(word_one, word_two) == true)
         'These are antigrams.'
       else
-        'These are not anagrams.'
+        not_grams = not_anagrams(word_one, word_two)
+        "These are not anagrams. They have #{not_grams.length} letters that match: #{not_grams}"
       end
     end
 
@@ -43,6 +44,22 @@ class Word_Check
       end
       true
     end
+
+    def not_anagrams(word_one, word_two)
+      results_array = []
+      new_array = []
+      first_word = word_one.downcase().split('').sort
+      second_word = word_two.downcase().split('').sort
+      first_word.each do |lettera|
+        second_word.each do |letterb|
+          if (lettera == letterb)
+            results_array.push(letterb) 
+          end
+        end
+      end   
+      new_array = (results_array.uniq)
+    end
+
     def ascii_art()
       puts File.read("lib/ascii_art.txt")
     end
