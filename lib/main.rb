@@ -12,7 +12,7 @@ class Word_Check
         'These are antigrams.'
       else
         not_grams = not_anagrams(word_one, word_two)
-        "These are not anagrams. They have #{not_grams.length} letters that match: #{not_grams}"
+        "These are not anagrams. They have #{not_grams.length} letters that match: #{not_grams.join(' ')}"
       end
     end
 
