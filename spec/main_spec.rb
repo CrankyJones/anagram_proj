@@ -41,5 +41,14 @@ describe(Word_Check) do
       expect(words.antigram('wolf', 'rabbit')).to(eq(true))
       end
     end
+
+    describe('#not_anagrams') do
+      it ('will take 2 arguments see if they are anagrams') do
+        words = Word_Check.new()
+        expect(words.anagram('bowl', 'owl')).to(eq('These are not anagrams. They have 3 letters that match: l o w'))
+      end
+    end
+
+
   end
 end
