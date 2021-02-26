@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require_relative('lib/main.rb')
+
 $stdout.sync = true
 words = Word_Check.new()
 x = 'y'
@@ -15,4 +16,5 @@ while (x == 'y') do
   puts 'Try again? Y/N?'
   x = gets.chomp.downcase()
 end
+words.ascii_art()
 

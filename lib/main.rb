@@ -41,7 +41,9 @@ class Word_Check
           end        
         end
       end
-      return true
+      true
     end
-
+    def ascii_art()
+      puts File.read("lib/ascii_art.txt")
+    end
 end
