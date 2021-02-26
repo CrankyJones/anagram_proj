@@ -2,14 +2,14 @@ class Word_Check
 
     def anagram (word_one, word_two)
       if (real_words(word_one, word_two) == false)
-        'Please input real words.'
+        return 'Please input real words.'
       end
       first_word = word_one.gsub(/[\W_]/, '').downcase().split('').sort
       second_word = word_two.gsub(/[\W_]/, '').downcase().split('').sort
       if (first_word == second_word)
         'These are anagrams.'
       elsif (antigram(word_one, word_two) == true)
-        'These are antigrams'
+        'These are antigrams.'
       else
         'These are not anagrams.'
       end
@@ -28,7 +28,7 @@ class Word_Check
           return false
         end
       end
-      return true
+      true
     end
 
     def antigram (word_one, word_two)
