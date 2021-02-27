@@ -1,14 +1,14 @@
 class Word_Check
 
     def anagram (word_one, word_two)
-      if (real_words(word_one, word_two) == false)
+      if (!real_words(word_one, word_two))
         return 'Please input real words.'
       end
-      first_word = word_one.gsub(/[\W_]/, '').downcase().split('').sort
-      second_word = word_two.gsub(/[\W_]/, '').downcase().split('').sort
+      first_word = word_one.gsub(/[\W!@#$%^&*()_+-=]/, '').downcase().split('').sort
+      second_word = word_two.gsub(/[\W!@#$%^&*()_+-=]/, '').downcase().split('').sort
       if (first_word == second_word)
         'These are anagrams.'
-      elsif (antigram(word_one, word_two) == true)
+      elsif (antigram(word_one, word_two))
         'These are antigrams.'
       else
         not_grams = not_anagrams(word_one, word_two)
@@ -20,7 +20,7 @@ class Word_Check
       first_word = word_one.downcase().split(' ')
       second_word = word_two.downcase().split(' ')
       first_word.each do |word|
-        if ((!word.match?(/[aeiouy]/i) || word.match?(/[0-9]/i)))
+        if ((!word.match?(/[aeiouy]/i)) || (word.match?(/[0-9]/i)))
           return false
         end
       end
@@ -33,8 +33,8 @@ class Word_Check
     end
 
     def antigram (word_one, word_two)
-      first_word = word_one.downcase().split('').sort
-      second_word = word_two.downcase().split('').sort
+      first_word = word_one.gsub(/[\W!@#$%^&*()_+-=]/, '').downcase().split('').sort
+      second_word = word_two.gsub(/[\W!@#$%^&*()_+-=]/, '').downcase().split('').sort
       first_word.each do |lettera|
         second_word.each do |letterb|
           if (lettera == letterb)
@@ -48,8 +48,8 @@ class Word_Check
     def not_anagrams(word_one, word_two)
       results_array = []
       new_array = []
-      first_word = word_one.downcase().split('').sort
-      second_word = word_two.downcase().split('').sort
+      first_word = word_one.gsub(/[\W!@#$%^&*()_+-=]/, '').downcase().split('').sort
+      second_word = word_two.gsub(/[\W!@#$%^&*()_+-=]/, '').downcase().split('').sort
       first_word.each do |lettera|
         second_word.each do |letterb|
           if (lettera == letterb)

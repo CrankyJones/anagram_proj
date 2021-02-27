@@ -7,11 +7,13 @@
 ## Technologies Used
 
 * Ruby
-* RSPEC 
+* RSPEC
+* Pry 
+* Interactive Ruby (for occasional spot testing)
 
 ## Description
 
-This checker will take two inputs, both words and phrases.  It check to make sure there is at least one vowel and no numbers in the words. If that test passes, it will strip punctuation and whitespace from the inputted string.  Next, it converts the string into an array of single letters. The checker then sorts these arrays alphabetically and then checks to see if the arrays are the same. 
+This checker will take two inputs, both words and phrases.  It check to make sure there is at least one vowel and no numbers in the words. If that test passes, it will strip punctuation and whitespace from the inputted string.  Next, it converts the string into an array of single letters. The checker then sorts these arrays alphabetically and then checks to see if the arrays are the same. If they are not anigrams, it calls an another method to determine if there are no letter matches. If there are a few matches, the checker will count the number of letter matches and then display those letters.
 
 ## Setup/Installation Requirements
 
@@ -24,7 +26,8 @@ This checker will take two inputs, both words and phrases.  It check to make sur
 
 ## Known Bugs
 
-* No known bugs at this time.
+* The handling of the inputs could use a little refactoring.
+
 
 ## **License**
 [MIT](https://opensource.org/licenses/MIT)

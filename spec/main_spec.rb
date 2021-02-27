@@ -23,6 +23,7 @@ describe(Word_Check) do
     words = Word_Check.new()
     expect(words.anagram('TimE to go up!!!', 'MItE go pout...')).to(eq('These are anagrams.'))
     end
+  end
 
     describe('#real_words') do
       it ('will take 2 arguments see if they are anagrams and check to make sure they are not consonant chains') do
@@ -48,7 +49,4 @@ describe(Word_Check) do
         expect(words.anagram('bowl', 'owl')).to(eq('These are not anagrams. They have 3 letters that match: l o w'))
       end
     end
-
-
-  end
 end
